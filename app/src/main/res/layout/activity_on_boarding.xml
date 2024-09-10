@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OnBoardingActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/onboarding_layout"
+        tools:ignore = "NotSibling"
+        android:id="@+id/onboarding_frame_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/onboarding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_above="@id/next_btn"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/selected_dot"
+                app:tint="@color/dark_purple"
+                android:id="@+id/dot1" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/unselect_dot"
+                app:tint="@color/dark_purple"
+                android:id="@+id/dot2" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/skip_textview"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_background"
+            android:textSize="8pt"
+            android:backgroundTint="@color/dark_purple"
+            android:text="Next"
+            android:textColor="@color/edit_text" />
+
+        <TextView
+            android:id="@+id/skip_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="Skip"
+            android:textSize="8pt"
+            android:textAlignment="center"
+            android:textColor="@color/dark_purple" />
+    </RelativeLayout>
+
+</RelativeLayout>

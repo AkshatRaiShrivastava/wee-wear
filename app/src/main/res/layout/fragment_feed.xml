@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FeedFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_centerVertical="true"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_add_24"
+            android:id="@+id/add_icon"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:importantForAutofill="no"
+            android:layout_marginEnd="7dp"
+
+            android:id="@+id/post_create_edit_text"
+            android:layout_toLeftOf="@id/userIcon"
+            android:layout_toRightOf="@id/add_icon"
+            android:layout_marginBottom="10dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:enabled="false"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:textSize="8pt"
+                android:id="@+id/usernameEdit"
+                android:background="@drawable/edit_text_background"
+                android:hint="Create a post"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            app:dividerColor="@color/black"
+            android:id="@+id/divider"
+            android:layout_below="@id/post_create_edit_text"
+            android:layout_marginTop="10dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_recycler_view"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</FrameLayout>

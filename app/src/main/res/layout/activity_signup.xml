@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="45dp"
+    tools:context=".SignupActivity">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/wee_wear_logo"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/login_section">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:importantForAutofill="no">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="8pt"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:id="@+id/name_edit_text"
+                    android:hint="Enter your name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:importantForAutofill="no">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="8pt"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:id="@+id/mob_num_edit_text"
+                    android:hint="Enter your mobile number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:importantForAutofill="no">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="8pt"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:id="@+id/email_edit_text"
+                    android:hint="Enter your email id"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:importantForAutofill="no">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="8pt"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:id="@+id/city_edit_text"
+                    android:hint="Enter your city"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:importantForAutofill="no">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="8pt"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_background"
+                    android:id="@+id/country_edit_text"
+                    android:hint="Enter your country"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:passwordToggleEnabled="true"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="8pt"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColorHint="@color/black"
+                    android:hint="Enter you password"
+                    android:background="@drawable/edit_text_background"
+                    android:id="@+id/password_edit_text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                app:passwordToggleEnabled="true"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="8pt"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:textColorHint="@color/black"
+                    android:hint="Confirm you password"
+                    android:layout_marginBottom="29dp"
+                    android:background="@drawable/edit_text_background"
+                    android:id="@+id/password_confirm_edit_text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/dark_purple"
+                android:text="NEXT"
+                android:layout_marginBottom="40dp"
+                android:textColor="@color/white"
+                android:id="@+id/next_btn"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:id="@+id/home_scroll_view"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome User!"
+                    android:textSize="12pt"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
+                    android:id="@+id/welcome_text"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dress With Confidence &amp; Join the Style"
+                    android:textSize="8pt"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/text_black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:backgroundTint="@color/light_purple"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Age"
+                    android:textColor="@color/edit_text"/>
+                <Spinner
+                    android:id="@+id/spinner_age"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/age"
+                    android:padding="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/spinner_background"
+                    android:popupBackground="@drawable/spinner_popup_background"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="Gender"
+                    android:textColor="@color/edit_text"/>
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/gender_options"
+                    android:padding="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/spinner_background"
+                    android:popupBackground="@drawable/spinner_popup_background"
+                    android:textColor="@android:color/white" />
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="Location"
+                    android:textColor="@color/edit_text"/>
+                <Spinner
+                    android:id="@+id/spinner_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_weight="1"
+                    android:entries="@array/location_options"
+                    android:background="@drawable/spinner_background"
+                    android:popupBackground="@drawable/spinner_popup_background"
+                    android:textColor="@android:color/white" />
+
+
+
+            </LinearLayout>
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/carousel"
+                android:layout_gravity="center"
+                app:iss_error_image="@drawable/default_error"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                app:iss_auto_cycle="true"
+                android:scrollIndicators="bottom"
+                app:iss_period="3000"
+                app:iss_delay="3000"
+                app:iss_corner_radius="10"
+                app:iss_text_align="CENTER"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <!-- Icon 1 -->
+                    <LinearLayout
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/light_purple"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:tint="@color/dark_purple"
+                            android:src="@drawable/marketplace"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MarketPlace"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="4pt"/>
+                    </LinearLayout>
+
+                    <!--                icon2-->
+                    <LinearLayout
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/light_purple"
+                        android:gravity="center"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:tint="@color/dark_purple"
+                            android:src="@drawable/pickup_point_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pickup Points"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="4pt"/>
+                    </LinearLayout>
+                    <!--                icon3-->
+                    <LinearLayout
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/light_purple"
+                        android:gravity="center"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:tint="@color/dark_purple"
+                            android:src="@drawable/swap_event_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Swap Events"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="4pt"/>
+                    </LinearLayout>
+                    <!--                icon4-->
+                    <LinearLayout
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/light_purple"
+                        android:gravity="center"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:tint="@color/dark_purple"
+                            android:src="@drawable/community"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Community"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="4pt"/>
+                    </LinearLayout>
+
+                    <!-- Repeat for other icons -->
+                </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/trending_main_layout"
+                android:layout_marginTop="18dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trending_heading"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trending"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/trendingTitle"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/trending_heading"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trending_recycler_view"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/teenager_main_layout"
+                android:layout_marginTop="18dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teenager_heading"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teenagers"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/teenagerTitle"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/teenager_heading"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teenager_recycler_view"/>
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+</FrameLayout>
